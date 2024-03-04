@@ -2,16 +2,20 @@ import React from "react";
 import Slider from "./Slider";
 import { useMediaQuery } from "@uidotdev/usehooks";
 import ProjectList from "./ProjectList";
+import { motion as m } from "framer-motion";
 
 const Portfolio = () => {
   const isMedium = useMediaQuery("only screen and (min-width : 769px)");
 
   return (
-    <div
-      name="portfolio"
-      className="w-full h-full md:h-screen bg-gradient-to-b from-black via-black to-gray-800 text-white "
+    <m.main
+      initial={{ x: "-100%" }}
+      animate={{ x: "0%" }}
+      exit={{ opacity: 1 }}
+      transition={{ duration: 1.25, ease: [0.22, 1, 0.36, 1] }}
+      className="w-full h-screen bg-gradient-to-b from-black via-black to-gray-800 text-white absolute top-0 left-0"
     >
-      <div className="max-w-screen-lg  px-4 pb-8 pt-20  mx-auto flex flex-col gap-8 w-full h-full">
+      <div className="max-w-screen-lg  px-4 pb-8 pt-20  mx-auto flex flex-col gap-8 w-full h-screen md:h-full overflow-y-auto">
         <div className="pb-6 ">
           <p className="text-4xl font-bold inline">Portfolio</p>
           <p className="py-4 lg:py-2">
@@ -21,7 +25,7 @@ const Portfolio = () => {
 
         {isMedium ? <Slider /> : <ProjectList />}
       </div>
-    </div>
+    </m.main>
   );
 };
 

@@ -10,6 +10,7 @@ import express from "../assets/express.svg";
 import mongoDB from "../assets/mongoDB.png";
 import shadcn from "../assets/shadcn-ui2.png";
 import github from "../assets/github.svg";
+import { motion as m } from "framer-motion";
 
 const Skills = () => {
   const techStack = [
@@ -76,11 +77,14 @@ const Skills = () => {
   ];
 
   return (
-    <div
-      name="skills"
-      className="w-full h-full  lg:h-screen bg-gradient-to-b from-black via-black to-gray-800 text-white "
+    <m.main
+      initial={{ x: "100%" }}
+      animate={{ x: "0%" }}
+      exit={{ opacity: 1 }}
+      transition={{ duration: 1.25, ease: [0.22, 1, 0.36, 1] }}
+      className="w-full h-screen bg-gradient-to-b from-black via-black to-gray-800 text-white  absolute top-0 left-0 "
     >
-      <div className="max-w-screen-lg mx-auto px-4 pb-8 pt-20 lg:pt-10 flex flex-col justify-center w-full h-full text-white">
+      <div className="max-w-screen-lg mx-auto px-4 pb-8 pt-20 gap-8 flex flex-col  w-full h-screen md:h-full  text-white overflow-y-auto">
         <div className="pb-4">
           <p className="text-4xl font-bold border-b-4 border-gray-500 p-2 inline">
             Skills
@@ -90,7 +94,7 @@ const Skills = () => {
           </p>
         </div>
 
-        <div className="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5  gap-8  text-center py-4 px-12 sm:px-0">
+        <div className="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5  gap-8  text-center py-4 px-12 sm:px-0 h-full ">
           {techStack.map(({ id, src, name, style }) => (
             <div
               key={id}
@@ -102,7 +106,7 @@ const Skills = () => {
           ))}
         </div>
       </div>
-    </div>
+    </m.main>
   );
 };
 
