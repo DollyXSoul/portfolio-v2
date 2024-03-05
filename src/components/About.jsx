@@ -7,16 +7,25 @@ const About = () => {
       <m.main
         initial={{ y: "-100%" }}
         animate={{ y: "0%" }}
-        exit={{ opacity: 1 }}
-        transition={{ duration: 1.25, ease: [0.22, 1, 0.36, 1] }}
+        exit={{ y: "0%", duration: 1.25 }}
+        transition={{
+          duration: 1.25,
+          ease: [0.22, 1, 0.36, 1],
+          staggerChildren: 1,
+        }}
         className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black via-black to-gray-800 text-white"
       >
         <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
-          <div className="pb-8">
-            <p className="text-4xl font-bold inline border-b-4 border-gray-500">
+          <m.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, ease: "easeIn", delay: 0.5 }}
+            className="pb-8"
+          >
+            <h1 className="text-4xl font-bold inline border-b-4 border-gray-500">
               About
-            </p>
-          </div>
+            </h1>
+          </m.div>
 
           <p className="text-lg md:text-xl  mt-20 text-slate-100 ">
             As a full-stack developer, I am truly passionate about creating

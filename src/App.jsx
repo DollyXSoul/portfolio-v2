@@ -16,7 +16,7 @@ function App() {
     <div>
       <Navbar />
       <SocialLinks />
-      <AnimatePresence initial={true} mode="wait">
+      <AnimatePresence initial={false} mode="popLayout">
         <Routes location={location} key={location.pathname}>
           <Route index element={<Home />} />
           <Route path="/about" element={<About />} />
