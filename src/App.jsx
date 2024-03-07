@@ -8,23 +8,44 @@ import About from "./components/About";
 import Portfolio from "./components/Portfolio";
 import Skills from "./components/Skills";
 import Contact from "./components/Contact";
+import AiForge from "./project-pages/AiForge";
+import RecipeRoundup from "./project-pages/RecipeRoundup";
+import Youtube2 from "./project-pages/Youtube2";
+import iNotes from "./project-pages/iNotes";
+import Newspanda from "./project-pages/Newspanda";
 
 function App() {
   const location = useLocation();
 
   return (
     <div>
-      <Navbar />
-      <SocialLinks />
-      <AnimatePresence initial={false} mode="popLayout">
+      {location.pathname === "/aiforge" ||
+      location.pathname === "/reciperoundup" ||
+      location.pathname === "/inotes" ||
+      location.pathname === "/youtube2" ||
+      location.pathname === "/newspanda" ? (
         <Routes location={location} key={location.pathname}>
-          <Route index element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/skills" element={<Skills />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/aiforge" element={<AiForge />} />
+          <Route path="/reciperoundup" element={<RecipeRoundup />} />
+          <Route path="/inotes" element={<iNotes />} />
+          <Route path="/youtube2" element={<Youtube2 />} />
+          <Route path="/newspanda" element={<Newspanda />} />
         </Routes>
-      </AnimatePresence>
+      ) : (
+        <>
+          <Navbar />
+          <SocialLinks />
+          <AnimatePresence initial={false} mode="popLayout">
+            <Routes location={location} key={location.pathname}>
+              <Route index element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/portfolio" element={<Portfolio />} />
+              <Route path="/skills" element={<Skills />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
+          </AnimatePresence>
+        </>
+      )}
     </div>
   );
 }
