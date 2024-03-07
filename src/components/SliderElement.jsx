@@ -1,4 +1,9 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import Slider from "react-slick";
+
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import { motion } from "framer-motion";
 import { BsArrowRight } from "react-icons/bs";
 
@@ -8,32 +13,31 @@ import youTube2 from "../assets/Portfolio/youTube2.gif";
 import NewsPanda from "../assets/Portfolio/NewsPanda.gif";
 import RecipeRoundup from "../assets/Portfolio/reciperoundup.gif";
 
-const Slider = () => {
-  const [positionIndexes, setpositionIndexes] = useState([0, 1, 2, 3, 4]);
-
-  const handleNext = () => {
-    setpositionIndexes((prevIndexes) => {
-      const updatedIndexes = prevIndexes.map(
-        (prevIndex) => (prevIndex + 1) % 5
-      );
-      return updatedIndexes;
-    });
-  };
-
+const SliderElement = () => {
   const images = [iNotes, youTube2, RecipeRoundup, AIForge, NewsPanda];
+  const links = [
+    "/iNotes",
+    "/youtube",
+    "/reciperoundup",
+    "/aiforge",
+    "/newspanda",
+  ];
 
-  const positions = ["left1", "left", "center", "right", "right1"];
-
-  const imageVariants = {
-    left1: { x: "-90%", scale: "0.5", zIndex: 1 },
-    left: { x: "-50%", scale: "0.7", zIndex: 3 },
-    center: { x: "0%", scale: "1.0", zIndex: 5 },
-    right: { x: "50%", scale: "0.7", zIndex: 3 },
-    right1: { x: "90%", scale: "0.5", zIndex: 1 },
+  const settings = {
+    className: "center",
+    infinite: true,
+    slidesToShow: 3,
+    centerPadding: "20px",
+    swipeToSlide: true,
+    afterChange: function (index) {
+      console.log(
+        `Slider Changed to: ${index + 1}, background: #222; color: #bada55`
+      );
+    },
   };
 
-  return (
-    <div className="flex items-center flex-col justify-center gap-8">
+  {
+    /* <div className="flex items-center flex-col justify-center gap-8">
       {images.map((img, index) => (
         <motion.img
           key={index}
@@ -45,7 +49,7 @@ const Slider = () => {
           variants={imageVariants}
           transition={{ duration: 0.5 }}
           style={{ position: "absolute" }}
-        />
+        ></motion.img>
       ))}
 
       <motion.button
@@ -57,8 +61,29 @@ const Slider = () => {
         <span>Next</span>
         <BsArrowRight size={20} className="ml-2" />
       </motion.button>
+    </div> */
+  }
+
+  return (
+    <div className="w-11/12 m-auto">
+      <div className="slider-container w-full">
+        <Slider {...settings} className="">
+          {images.map((img, index) => (
+            <div>
+              <Link to={links[index]}>
+                <img
+                  key={index}
+                  src={img}
+                  alt={img}
+                  className="rounded-md md:w-64 md:h-80 lg:w-72 lg:h-96  "
+                />
+              </Link>
+            </div>
+          ))}
+        </Slider>
+      </div>
     </div>
   );
 };
 
-export default Slider;
+export default SliderElement;

@@ -1,8 +1,8 @@
 import React from "react";
-import Slider from "./Slider";
 import { useMediaQuery } from "@uidotdev/usehooks";
 import ProjectList from "./ProjectList";
 import { motion as m } from "framer-motion";
+import SliderElement from "./SliderElement";
 
 const Portfolio = () => {
   const isMedium = useMediaQuery("only screen and (min-width : 769px)");
@@ -30,7 +30,7 @@ const Portfolio = () => {
           </p>
         </m.div>
 
-        {isMedium ? <Slider /> : <ProjectList />}
+        {isMedium ? <SliderElement /> : <ProjectList />}
       </div>
     </m.main>
   );
