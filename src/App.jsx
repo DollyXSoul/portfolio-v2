@@ -11,7 +11,7 @@ import Contact from "./components/Contact";
 import AiForge from "./project-pages/AiForge";
 import RecipeRoundup from "./project-pages/RecipeRoundup";
 import Youtube2 from "./project-pages/Youtube2";
-import iNotes from "./project-pages/iNotes";
+import Inotes from "./project-pages/Inotes";
 import Newspanda from "./project-pages/Newspanda";
 
 function App() {
@@ -27,7 +27,7 @@ function App() {
         <Routes location={location} key={location.pathname}>
           <Route path="/aiforge" element={<AiForge />} />
           <Route path="/reciperoundup" element={<RecipeRoundup />} />
-          <Route path="/inotes" element={<iNotes />} />
+          <Route path="/inotes" element={<Inotes />} />
           <Route path="/youtube2" element={<Youtube2 />} />
           <Route path="/newspanda" element={<Newspanda />} />
         </Routes>

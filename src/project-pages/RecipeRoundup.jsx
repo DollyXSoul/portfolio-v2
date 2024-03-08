@@ -33,7 +33,7 @@ const RecipeRoundup = () => {
         <div className=" hidden lg:flex h-1/2  justify-center items-center">
           <img
             src={img4}
-            className="sm:h-80 sm:w-80 lg:h-[320px] lg:w-[320px] xl:h-[370] xl:w-[370]"
+            className="sm:h-80 sm:w-80 lg:h-[320px] lg:w-[320px] "
           />
         </div>
       </div>
@@ -48,7 +48,7 @@ const RecipeRoundup = () => {
             discover new recipes.
           </p>
           <br />
-          <p className=" hidden md:block font-bold">
+          <p className=" hidden xl:block font-bold">
             The application is built using React.js, with the backend managed by
             Sanity CMS(Content Management System) and styled with Tailwind CSS.
           </p>
@@ -66,10 +66,7 @@ const RecipeRoundup = () => {
           </a>
         </div>
         <div className=" h-1/2 flex justify-center items-center ">
-          <img
-            src={img3}
-            className="h-60 w-60 lg:h-[320px] lg:w-[320px] xl:h-[370] xl:w-[370]"
-          />
+          <img src={img3} className="h-60 w-60 lg:h-[320px] lg:w-[320px] " />
         </div>
       </div>
     </div>
