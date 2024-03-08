@@ -17,7 +17,7 @@ const SliderElement = () => {
   const images = [iNotes, youTube2, RecipeRoundup, AIForge, NewsPanda];
   const links = [
     "/inotes",
-    "/youtube",
+    "/youtube2",
     "/reciperoundup",
     "/aiforge",
     "/newspanda",
