@@ -9,9 +9,8 @@ import { RiReactjsFill } from "react-icons/ri";
 import { SiMongodb } from "react-icons/si";
 import { FaNode } from "react-icons/fa";
 import { SiExpress } from "react-icons/si";
-
 import { VscGithub } from "react-icons/vsc";
-
+import { motion as m } from "framer-motion";
 const Inotes = () => {
   const icon1 = <RiReactjsFill />;
   const icon2 = <SiMongodb />;
@@ -21,7 +20,13 @@ const Inotes = () => {
   const deployLink = "https://inotes-dc-app.netlify.app/";
 
   return (
-    <div className="p-16 h-screen w-screen overflow-y-auto flex flex-col lg:flex-row text-white bg-gradient-to-b from-yellow-600  via-yellow-400  to-slate-400 ">
+    <m.div
+      initial={{ scale: 0 }}
+      animate={{ scale: 1 }}
+      exit={{ scale: 0 }}
+      transition={{ duration: 0.7, ease: "easeInOut" }}
+      className="p-16 h-screen w-screen overflow-y-auto flex flex-col lg:flex-row text-white bg-gradient-to-b from-yellow-600  via-yellow-400  to-slate-400 "
+    >
       <Goback />
       <div className="w-full lg:w-1/2 flex flex-col gap-2">
         <div className="lg:h-1/2 ">
@@ -74,7 +79,7 @@ const Inotes = () => {
           <img src={img2} className="h-60 w-60 lg:h-[295px] lg:w-[295px]" />
         </div>
       </div>
-    </div>
+    </m.div>
   );
 };
 

@@ -19,23 +19,24 @@ function App() {
 
   return (
     <div>
-      {location.pathname === "/aiforge" ||
-      location.pathname === "/reciperoundup" ||
-      location.pathname === "/inotes" ||
-      location.pathname === "/youtube2" ||
-      location.pathname === "/newspanda" ? (
-        <Routes location={location} key={location.pathname}>
-          <Route path="/aiforge" element={<AiForge />} />
-          <Route path="/reciperoundup" element={<RecipeRoundup />} />
-          <Route path="/inotes" element={<Inotes />} />
-          <Route path="/youtube2" element={<Youtube2 />} />
-          <Route path="/newspanda" element={<Newspanda />} />
-        </Routes>
-      ) : (
-        <>
-          <Navbar />
-          <SocialLinks />
-          <AnimatePresence initial={false} mode="popLayout">
+      <AnimatePresence initial={false} mode="wait">
+        {location.pathname === "/aiforge" ||
+        location.pathname === "/reciperoundup" ||
+        location.pathname === "/inotes" ||
+        location.pathname === "/youtube2" ||
+        location.pathname === "/newspanda" ? (
+          <Routes location={location} key={location.pathname}>
+            <Route path="/aiforge" element={<AiForge />} />
+            <Route path="/reciperoundup" element={<RecipeRoundup />} />
+            <Route path="/inotes" element={<Inotes />} />
+            <Route path="/youtube2" element={<Youtube2 />} />
+            <Route path="/newspanda" element={<Newspanda />} />
+          </Routes>
+        ) : (
+          <>
+            <Navbar />
+            <SocialLinks />
+
             <Routes location={location} key={location.pathname}>
               <Route index element={<Home />} />
               <Route path="/about" element={<About />} />
@@ -43,9 +44,9 @@ function App() {
               <Route path="/skills" element={<Skills />} />
               <Route path="/contact" element={<Contact />} />
             </Routes>
-          </AnimatePresence>
-        </>
-      )}
+          </>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

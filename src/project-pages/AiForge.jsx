@@ -10,6 +10,7 @@ import { SiPrisma } from "react-icons/si";
 import { SiTailwindcss } from "react-icons/si";
 import { VscGithub } from "react-icons/vsc";
 import Goback from "./components/Gobackbtn";
+import { motion as m } from "framer-motion";
 
 const AiForge = () => {
   const icon1 = <TbBrandNextjs />;
@@ -19,7 +20,13 @@ const AiForge = () => {
   const deployLink = "https://ai-forge-sigma.vercel.app/";
 
   return (
-    <div className="p-16 h-screen w-screen overflow-y-auto flex flex-col lg:flex-row text-white bg-gradient-to-b from-blue-600  via-blue-300  to-slate-400 ">
+    <m.div
+      initial={{ scale: 0 }}
+      animate={{ scale: 1 }}
+      exit={{ scale: 0 }}
+      transition={{ duration: 0.7, ease: "easeInOut" }}
+      className="p-16 h-screen w-screen overflow-y-auto flex flex-col lg:flex-row text-white bg-gradient-to-b from-blue-600  via-blue-300  to-slate-400 "
+    >
       <Goback />
       <div className="w-full lg:w-1/2 flex flex-col gap-2">
         <div className="lg:h-1/2 ">
@@ -72,7 +79,7 @@ const AiForge = () => {
           <img src={img2} className="h-60 w-60 lg:h-[320px] lg:w-[320px]" />
         </div>
       </div>
-    </div>
+    </m.div>
   );
 };
 
