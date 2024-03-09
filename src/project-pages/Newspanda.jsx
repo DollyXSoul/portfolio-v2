@@ -9,6 +9,7 @@ import { SiBootstrap } from "react-icons/si";
 import { SiReactrouter } from "react-icons/si";
 import { SiJavascript } from "react-icons/si";
 import { VscGithub } from "react-icons/vsc";
+import Goback from "./components/Gobackbtn";
 
 const Newspanda = () => {
   const icon1 = <RiReactjsFill />;
@@ -21,6 +22,7 @@ const Newspanda = () => {
 
   return (
     <div className="p-16 h-screen w-screen overflow-y-auto flex flex-col lg:flex-row text-white bg-gradient-to-b from-gray-700  via-gray-400  to-slate-400 ">
+      <Goback />
       <div className="w-full lg:w-1/2 flex flex-col gap-2">
         <div className="lg:h-1/2 ">
           <Title

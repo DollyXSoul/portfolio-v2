@@ -9,6 +9,7 @@ import { RiOpenaiFill } from "react-icons/ri";
 import { SiPrisma } from "react-icons/si";
 import { SiTailwindcss } from "react-icons/si";
 import { VscGithub } from "react-icons/vsc";
+import Goback from "./components/Gobackbtn";
 
 const AiForge = () => {
   const icon1 = <TbBrandNextjs />;
@@ -19,6 +20,7 @@ const AiForge = () => {
 
   return (
     <div className="p-16 h-screen w-screen overflow-y-auto flex flex-col lg:flex-row text-white bg-gradient-to-b from-blue-600  via-blue-300  to-slate-400 ">
+      <Goback />
       <div className="w-full lg:w-1/2 flex flex-col gap-2">
         <div className="lg:h-1/2 ">
           <Title

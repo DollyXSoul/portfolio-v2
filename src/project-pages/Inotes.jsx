@@ -1,9 +1,10 @@
 import React from "react";
 import Title from "./components/Title";
+import Techstack from "./components/Techstack";
+import Goback from "./components/Gobackbtn";
 import logo from "./assets/iNotes.png";
 import img1 from "./assets/img9.png";
 import img2 from "./assets/img10.png";
-import Techstack from "./components/Techstack";
 import { RiReactjsFill } from "react-icons/ri";
 import { SiMongodb } from "react-icons/si";
 import { FaNode } from "react-icons/fa";
@@ -21,6 +22,7 @@ const Inotes = () => {
 
   return (
     <div className="p-16 h-screen w-screen overflow-y-auto flex flex-col lg:flex-row text-white bg-gradient-to-b from-yellow-600  via-yellow-400  to-slate-400 ">
+      <Goback />
       <div className="w-full lg:w-1/2 flex flex-col gap-2">
         <div className="lg:h-1/2 ">
           <Title

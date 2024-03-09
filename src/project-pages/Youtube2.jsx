@@ -9,6 +9,7 @@ import { SiMui } from "react-icons/si";
 import { FaNode } from "react-icons/fa";
 import { SiTypescript } from "react-icons/si";
 import { VscGithub } from "react-icons/vsc";
+import Goback from "./components/Gobackbtn";
 const Youtube2 = () => {
   const icon1 = <RiReactjsFill />;
   const icon2 = <SiMui />;
@@ -17,6 +18,7 @@ const Youtube2 = () => {
   const deployLink = "https://youtube-clone-by-dolly.netlify.app/";
   return (
     <div className="p-16 h-screen w-screen overflow-y-auto flex flex-col lg:flex-row text-white bg-gradient-to-b from-red-700  via-red-400  to-slate-400 ">
+      <Goback />
       <div className="w-full lg:w-1/2 flex flex-col gap-2">
         <div className="lg:h-1/2 ">
           <Title
