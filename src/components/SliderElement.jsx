@@ -1,34 +1,37 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import Slider from "react-slick";
-
+import { useMediaQuery } from "@uidotdev/usehooks";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { motion } from "framer-motion";
-import { BsArrowRight } from "react-icons/bs";
 
-import iNotes from "../assets/Portfolio/iNotes_1.png";
-import AIForge from "../assets/Portfolio/AIForge.gif";
-import youTube2 from "../assets/Portfolio/youTube2.gif";
-import NewsPanda from "../assets/Portfolio/NewsPanda.gif";
-import RecipeRoundup from "../assets/Portfolio/reciperoundup.gif";
+import iNotes from "../assets/Portfolio/inotes.png";
+import AIForge from "../assets/Portfolio/aiforge.png";
+import youTube2 from "../assets/Portfolio/youtube2.png";
+import NewsPanda from "../assets/Portfolio/newspanda.png";
+import RecipeRoundup from "../assets/Portfolio/reciperoundup.png";
+
+const images = [AIForge, youTube2, RecipeRoundup, iNotes, NewsPanda];
+const links = [
+  "/aiforge",
+  "/youtube2",
+  "/reciperoundup",
+  "/inotes",
+  "/newspanda",
+];
 
 const SliderElement = () => {
-  const images = [iNotes, youTube2, RecipeRoundup, AIForge, NewsPanda];
-  const links = [
-    "/inotes",
-    "/youtube2",
-    "/reciperoundup",
-    "/aiforge",
-    "/newspanda",
-  ];
+  const isLarge = useMediaQuery("only screen and (min-width : 1023px)");
 
   const settings = {
     className: "center",
     infinite: true,
-    slidesToShow: 3,
+    slidesToShow: isLarge ? 3 : 1,
     centerPadding: "20px",
+    autoplay: true,
     swipeToSlide: true,
+    autoplaySpeed: 2500,
+    pauseOnHover: true,
     afterChange: function (index) {
       console.log(
         `Slider Changed to: ${index + 1}, background: #222; color: #bada55`
@@ -47,7 +50,7 @@ const SliderElement = () => {
                   key={index}
                   src={img}
                   alt={img}
-                  className="rounded-md md:w-64 md:h-80 lg:w-72 lg:h-96  "
+                  className=" lg:w-72 lg:h-[400px]  "
                 />
               </Link>
             </div>
