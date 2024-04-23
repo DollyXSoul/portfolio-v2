@@ -7,13 +7,15 @@ import "slick-carousel/slick/slick-theme.css";
 
 import iNotes from "../assets/Portfolio/inotes.png";
 import AIForge from "../assets/Portfolio/aiforge.png";
+import DataDepot from "../assets/Portfolio/datadepot.png";
 import youTube2 from "../assets/Portfolio/youtube2.png";
 import NewsPanda from "../assets/Portfolio/newspanda.png";
 import RecipeRoundup from "../assets/Portfolio/reciperoundup.png";
 
-const images = [AIForge, youTube2, RecipeRoundup, iNotes, NewsPanda];
+const images = [AIForge, DataDepot, youTube2, RecipeRoundup, iNotes, NewsPanda];
 const links = [
   "/aiforge",
+  "/datadepot",
   "/youtube2",
   "/reciperoundup",
   "/inotes",
