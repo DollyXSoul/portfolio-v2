@@ -25,7 +25,7 @@ const DataDepot = () => {
       animate={{ scale: 1 }}
       exit={{ scale: 0 }}
       transition={{ duration: 0.7, ease: "easeInOut" }}
-      className="p-16 h-screen w-screen overflow-y-auto flex flex-col lg:flex-row text-white bg-gradient-to-b from-orange-600  via-orange-300  to-slate-400 "
+      className="p-16 h-screen w-screen overflow-y-auto flex flex-col lg:flex-row text-white bg-gradient-to-b from-orange-600/90  via-orange-400  to-slate-400 "
     >
       <Goback />
       <div className="w-full lg:w-1/2 flex flex-col gap-2">
@@ -48,15 +48,15 @@ const DataDepot = () => {
       </div>
 
       <div className="w-full lg:w-1/2 flex flex-col gap-2 ">
-        <div className="h-full lg:h-1/2  border border-white p-2 ml-16 overflow-hidden">
-          <p className="font-bold">
+        <div className="h-full lg:h-1/2 p-2 ml-16 overflow-hidden font-poppins">
+          <p>
             DataDepot is your simple Dropbox clone built using Next.js, ShadCN
             and Firebase. DataDepot allows you to upload files, rename or delete
             already uploaded files, providing you with a convenient way to
             manage your data.
           </p>
           <br />
-          <p className=" hidden xl:block font-bold">
+          <p className=" hidden xl:block">
             DataDepot is a streamlined data management platform built with
             Next.js and Firebase. It provides users with intuitive tools for
             uploading, organizing, and managing their files effortlessly.

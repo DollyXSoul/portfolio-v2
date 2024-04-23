@@ -19,7 +19,7 @@ const Portfolio = () => {
           transition={{ duration: 0.5, ease: "easeIn", delay: 0.5 }}
           className="pb-6 "
         >
-          <p className="text-4xl font-bold inline border-b-4 border-gray-500">
+          <p className="text-4xl font-bold inline border-b-4 border-gray-500 font-heading">
             Portfolio
           </p>
           <p className="py-4 lg:py-2">

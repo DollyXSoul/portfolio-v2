@@ -50,8 +50,8 @@ const Newspanda = () => {
       </div>
 
       <div className="w-full lg:w-1/2 flex flex-col gap-2 ">
-        <div className="h-full lg:h-1/2  border border-white p-2 ml-16 overflow-hidden">
-          <p className="font-bold">
+        <div className="h-full lg:h-1/2 p-2 ml-16 overflow-hidden font-poppins">
+          <p>
             NewsPanda is a full-stack web application that allows users to
             access the latest news headlines from different categories. The
             application fetches news articles from APIs and presents them in

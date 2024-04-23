@@ -25,7 +25,7 @@ const AiForge = () => {
       animate={{ scale: 1 }}
       exit={{ scale: 0 }}
       transition={{ duration: 0.7, ease: "easeInOut" }}
-      className="p-16 h-screen w-screen overflow-y-auto flex flex-col lg:flex-row text-white bg-gradient-to-b from-blue-600  via-blue-300  to-slate-400 "
+      className="p-16 h-screen w-screen overflow-y-auto flex flex-col lg:flex-row text-white  bg-gradient-to-b from-blue-600  via-blue-300  to-slate-400 "
     >
       <Goback />
       <div className="w-full lg:w-1/2 flex flex-col gap-2">
@@ -48,9 +48,9 @@ const AiForge = () => {
         </div>
       </div>
 
-      <div className="w-full lg:w-1/2 flex flex-col gap-2 ">
-        <div className="h-full lg:h-1/2  border border-white p-2 ml-16 overflow-hidden">
-          <p className="font-bold">
+      <div className="w-full lg:w-1/2 flex flex-col gap-2  font-poppins">
+        <div className="h-full lg:h-1/2  p-2 ml-16 overflow-hidden">
+          <p className="">
             AIForge, your all-in-one platform for harnessing the capabilities of
             Artificial Intelligence. AIForge is built with Next.js, providing a
             seamless and interactive experience for users looking to explore
@@ -58,9 +58,9 @@ const AiForge = () => {
             generation, code generation, music, and video generation.
           </p>
           <br />
-          <p className=" hidden xl:block font-bold">
-            AIForge, your all-in-one platform for harnessing the capabilities of
-            Artificial Intelligence. AIForge is built with Next.js, providing a
+          <p className=" hidden xl:block ">
+            AIForge, your all-in-one platform built with Next.js for harnessing
+            the capabilities of Artificial Intelligence.
           </p>
 
           <a

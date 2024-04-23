@@ -22,7 +22,7 @@ const About = () => {
             transition={{ duration: 0.5, ease: "easeIn", delay: 0.5 }}
             className="pb-8"
           >
-            <h1 className="text-4xl font-bold inline border-b-4 border-gray-500">
+            <h1 className="text-4xl font-bold inline border-b-4 border-gray-500 font-heading">
               About
             </h1>
           </m.div>

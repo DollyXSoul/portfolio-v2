@@ -49,8 +49,8 @@ const RecipeRoundup = () => {
       </div>
 
       <div className="w-full lg:w-1/2 flex flex-col gap-2 ">
-        <div className="h-full lg:h-1/2  border border-white p-2 ml-16 overflow-hidden">
-          <p className=" font-bold">
+        <div className="h-full lg:h-1/2 p-2 ml-16 overflow-hidden font-poppins">
+          <p>
             Recipe Roundup is a community-driven recipe sharing platform that
             allows users to create and share their favorite recipes with others.
             The application is designed to be user-friendly and accessible, with
@@ -58,7 +58,7 @@ const RecipeRoundup = () => {
             discover new recipes.
           </p>
           <br />
-          <p className=" hidden xl:block font-bold">
+          <p className=" hidden xl:block">
             The application is built using React.js, with the backend managed by
             Sanity CMS(Content Management System) and styled with Tailwind CSS.
           </p>

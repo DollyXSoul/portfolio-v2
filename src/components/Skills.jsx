@@ -91,7 +91,7 @@ const Skills = () => {
           transition={{ duration: 0.5, ease: "easeIn", delay: 0.5 }}
           className="pb-4"
         >
-          <p className="text-4xl font-bold border-b-4 border-gray-500 p-2 inline">
+          <p className="text-4xl font-bold border-b-4 border-gray-500  inline font-heading">
             Skills
           </p>
           <p className="py-6">

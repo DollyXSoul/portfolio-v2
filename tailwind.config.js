@@ -15,6 +15,9 @@ export default {
     },
     fontFamily: {
       signature: ["Ruthie", "cursive"],
+      heading: ["Platypi", "normal"],
+      projectHeading: ["Rammetto One", "normal"],
+      poppins: ["Poppins", "normal"],
     },
   },
   plugins: [],

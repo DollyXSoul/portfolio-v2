@@ -49,8 +49,8 @@ const Inotes = () => {
       </div>
 
       <div className="w-full lg:w-1/2 flex flex-col gap-2 ">
-        <div className="h-full lg:h-1/2  border border-white p-2 ml-16 overflow-hidden">
-          <p className="font-bold">
+        <div className="h-full lg:h-1/2 p-2 ml-16 overflow-hidden font-poppins">
+          <p>
             About iNotes is a responsive full-stack web app developed with the
             aim to learn and implement how real-world applications are created
             and deployed. The functionalities provided are user authentication ,
@@ -58,7 +58,7 @@ const Inotes = () => {
             the notes.
           </p>
           <br />
-          <p className=" hidden xl:block font-bold">
+          <p className=" hidden xl:block">
             With a clean and intuitive interface, iNotes provides a simple
             solution for keeping track of important information.
           </p>

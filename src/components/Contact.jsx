@@ -17,7 +17,7 @@ const Contact = () => {
           transition={{ duration: 0.5, ease: "easeIn", delay: 0.5 }}
           className="pt-10 "
         >
-          <p className="text-4xl font-bold inline border-b-4 border-gray-500">
+          <p className="text-4xl font-bold inline border-b-4 border-gray-500 font-heading">
             Contact
           </p>
           <p className="py-6 "> Submit the form to get in touch with me </p>

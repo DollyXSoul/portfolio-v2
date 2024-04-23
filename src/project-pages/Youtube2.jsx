@@ -47,15 +47,15 @@ const Youtube2 = () => {
       </div>
 
       <div className="w-full lg:w-1/2 flex flex-col gap-2 ">
-        <div className="h-full lg:h-1/2  border border-white p-2 ml-16 overflow-hidden">
-          <p className=" font-bold">
+        <div className="h-full lg:h-1/2 p-2 ml-16 overflow-hidden font-poppins">
+          <p>
             YouTube Clone is a feature-rich web application that is a clone of
             the popular video-sharing site, YouTube. With its user-friendly
             interface and seamless functionality, users can search and watch
             videos, and see related videos to the currently playing video.
           </p>
           <br />
-          <p className=" hidden xl:block font-bold">
+          <p className=" hidden xl:block">
             The app is built using React, Material UI, and powered by the
             YouTube API v3 available on RapidAPI hub.The goal of this project
             was to learn modern web application development and API
